@@ -9,11 +9,205 @@
     <title>ハッスン＠バスケIQの森</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全体のリセット */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 背景色と全体のフォント */
+        body {
+            background-color: #1E2A47; /* ダークブルー */
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* ヘッダー */
+        header.hero-header {
+            background-image: url('images/header-image.jpg'); /* ヘッダー画像 */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+            text-align: center;
+            padding-top: 120px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        header .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        header .cta-button {
+            background-color: #FFD700; /* ゴールド */
+            padding: 10px 20px;
+            color: #1E2A47;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        header .cta-button:hover {
+            background-color: #ffcc00; /* 明るいゴールド */
+        }
+
+        /* ナビゲーション */
+        nav.navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #112B6A;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FFD700; /* 金色 */
+        }
+
+        /* メインコンテンツ */
+        main {
+            padding: 50px;
+        }
+
+        /* サイトについて */
+        section#about {
+            margin-bottom: 40px;
+        }
+
+        section#about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section#about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* 最新の試合まとめ */
+        section#latest h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #263B76;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 48%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* お問い合わせ */
+        section#contact {
+            margin-top: 40px;
+        }
+
+        section#contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section#contact p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        section#contact a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #112B6A;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        /* フェードインアニメーション */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
 </head>
 <body>
     <!-- ヘッダーセクション -->
     <header class="hero-header">
-        <img src="images/icon.png" alt="サイトアイコン" class="site-icon">
         <div class="overlay">
             <h1>ハッスン＠バスケIQの森</h1>
             <p>Bリーグの試合を深く分析し、選手のパフォーマンスや戦術を解説！</p>
