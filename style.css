@@ -1,0 +1,149 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* 背景を淡いグレーに */
+    color: #333; /* 文字色をダークグレーに */
+}
+header {
+    text-align: center;
+    background-color: #005bbb; /* 青系の背景 */
+    color: #fff; /* 白文字 */
+    padding: 20px 0;
+}
+
+.header-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.site-logo img {
+    width: 100px;
+    border-radius: 50%; /* ロゴを丸くする */
+    margin: 10px auto;
+    display: block;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+nav {
+    background: #333; /* ダークグレー */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* ホバー時のゴールド */
+}
+
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #fff; /* 白背景でカードっぽく */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #005bbb; /* 青の下線 */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+section p, section ul {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+section ul li {
+    list-style: disc;
+    margin-bottom: 5px;
+}
+
+
+section a {
+    color: #005bbb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #ff4500; /* ホバー時のオレンジ */
+}
+
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
