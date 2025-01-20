@@ -1,35 +1,40 @@
-
+/* 基本スタイル */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9; /* ページ背景: 淡いグレー */
+    color: #333; /* 文字: ダークグレー */
     line-height: 1.6;
-    background-color: #f9f9f9; /* 背景を淡いグレーに */
-    color: #333; /* 文字色をダークグレーに */
 }
+
+/* ヘッダー */
 header {
     text-align: center;
-    background-color: #005bbb; /* 青系の背景 */
+    background-color: #005bbb; /* 青背景 */
     color: #fff; /* 白文字 */
     padding: 20px 0;
+    position: relative;
 }
 
 .header-image {
     width: 100%;
     max-height: 300px;
-    object-fit: cover;
+    object-fit: cover; /* 写真をアスペクト比を維持して表示 */
 }
 
 .site-logo img {
-    width: 100px;
+    width: 120px; /* サイトロゴのサイズ */
+    height: auto;
     border-radius: 50%; /* ロゴを丸くする */
-    margin: 10px auto;
+    margin: -60px auto 10px; /* ヘッダー画像に少し被せる配置 */
+    border: 5px solid #fff; /* 外枠を白くする */
     display: block;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin: 10px 0;
+    font-size: 2.5rem; /* サイトタイトルのサイズ */
+    margin: 10px 0 5px;
 }
 
 header p {
@@ -37,16 +42,16 @@ header p {
     margin: 0;
 }
 
+/* ナビゲーション */
 nav {
-    background: #333; /* ダークグレー */
-    color: #fff;
+    background-color: #333; /* ナビ背景: ダークグレー */
     padding: 10px 0;
 }
 
 nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -56,51 +61,53 @@ nav ul li {
 }
 
 nav ul li a {
+    color: #fff; /* ナビ文字: 白 */
     text-decoration: none;
-    color: #fff;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* ホバーアニメーション */
 }
 
 nav ul li a:hover {
     color: #ffd700; /* ホバー時のゴールド */
 }
 
-
+/* メイン */
 main {
     padding: 20px;
 }
 
+/* セクション */
 section {
     margin-bottom: 30px;
-    padding: 15px;
-    background: #fff; /* 白背景でカードっぽく */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    padding: 20px;
+    background: #fff; /* カード背景: 白 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽い影 */
+    border-radius: 8px; /* カードの角を丸くする */
 }
 
 section h2 {
     font-size: 1.8rem;
-    border-bottom: 2px solid #005bbb; /* 青の下線 */
+    color: #005bbb; /* 青 */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #005bbb; /* 青い下線 */
     padding-bottom: 5px;
-    margin-bottom: 15px;
 }
 
 section p, section ul {
     font-size: 1rem;
-    margin: 10px 0;
+    color: #333;
 }
 
 section ul {
+    list-style-type: disc;
     padding-left: 20px;
 }
 
 section ul li {
-    list-style: disc;
     margin-bottom: 5px;
 }
 
-
+/* お問い合わせリンク */
 section a {
     color: #005bbb;
     text-decoration: none;
@@ -109,23 +116,23 @@ section a {
 }
 
 section a:hover {
-    color: #ff4500; /* ホバー時のオレンジ */
+    color: #ff4500; /* ホバー時: オレンジ */
 }
 
-
+/* フッター */
 footer {
     text-align: center;
-    background: #333;
-    color: #fff;
+    background: #333; /* ダークグレー */
+    color: #fff; /* 白文字 */
     padding: 10px 0;
-    margin-top: 20px;
 }
 
 footer p {
     font-size: 0.9rem;
+    margin: 0;
 }
 
-
+/* レスポンシブデザイン */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -136,7 +143,7 @@ footer p {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* ナビを縦並びに */
     }
 
     nav ul li {
@@ -144,6 +151,6 @@ footer p {
     }
 
     section {
-        padding: 10px;
+        padding: 15px;
     }
 }
