@@ -1,138 +1,124 @@
+/* 全体の基本スタイル */
 body {
-    background: url(':images:/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-color: #333; /* 背景画像がない場合のフォールバックカラー */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #121212; /* 背景全体のダークグレー */
+    color: #ffffff; /* 文字色を白に設定 */
+    line-height: 1.6;
 }
 
-h1, h2 {
-    color: #0055a5;
-    text-align: center;
+h1, h2, h3 {
+    margin: 0;
+    color: #f0f0f0; /* 見出し用の明るい白色 */
 }
 
 a {
+    color: #0077cc; /* リンク用の青色 */
     text-decoration: none;
-    color: #0078d7;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #005fa3; /* ホバー時に少し濃い青色 */
 }
 
 /* ヘッダー */
 .hero-header {
-    background: url('images/header-background.jpg') center/cover no-repeat;
-    height: 100vh;
-    color: white;
     position: relative;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 100px 20px;
+    background: url('background-image.jpg') no-repeat center center/cover; /* 背景画像 */
+    color: #ffffff;
 }
 
-.site-icon {
-    width: 100px;
-    height: 100px;
+.hero-header .overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-header h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+.hero-header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* オーバーレイ効果 */
+    z-index: 1;
+}
+
+/* ボタン */
 .cta-button {
-    background: #0078d7;
-    color: white;
+    display: inline-block;
+    background-color: #0077cc; /* 鮮やかな青 */
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
+    text-decoration: none;
     font-weight: bold;
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background: #0055a5;
+    background-color: #005fa3; /* ホバー時に少し濃く */
 }
 
 /* ナビゲーション */
 .navbar {
-    background: #0055a5;
+    background: #1a1a1a;
     padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
 }
 
 .nav-links a {
-    color: white;
+    color: #ffffff;
     font-weight: bold;
 }
 
-/* アニメーション */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease-in-out forwards;
+/* メインコンテンツ */
+main {
+    padding: 40px 20px;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* カードスタイル */
-.card-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+section {
+    margin-bottom: 40px;
     padding: 20px;
-}
-
-.card {
-    background: white;
+    background: rgba(255, 255, 255, 0.05); /* セクション背景に透明感 */
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 15px;
-}
-
-.read-more {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0077cc; /* 見出しに青色のライン */
+    padding-bottom: 5px;
 }
 
 /* フッター */
 footer {
+    background: #1a1a1a;
+    color: #ffffff;
     text-align: center;
-    background-color: #0055a5;
-    color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
 }
