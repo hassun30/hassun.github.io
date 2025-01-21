@@ -26,7 +26,7 @@ a:hover {
     position: relative;
     text-align: center;
     padding: 100px 20px;
-    background: url(':images:background-image.jpg') no-repeat center center/cover; /* 背景画像 */
+    background: url(':images:background.jpg') no-repeat center center/cover; /* 背景画像 */
     color: #ffffff;
 }
 
