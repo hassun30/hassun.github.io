@@ -1,10 +1,7 @@
-/* ベーススタイル */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f5f5f5;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #333; /* 背景画像がない場合のフォールバックカラー */
 }
 
 h1, h2 {
