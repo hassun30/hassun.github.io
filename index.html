@@ -10,261 +10,151 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 全体のリセット */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* 背景色と全体のフォント */
+        /* 全体背景 */
         body {
-            background-color: #1E2A47; /* ダークブルー */
+            margin: 0;
             font-family: 'Roboto', sans-serif;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
-            line-height: 1.6;
         }
 
         /* ヘッダー */
-        header.hero-header {
-            background-image: url('images/header-image.jpg'); /* ヘッダー画像 */
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            color: white;
+        .hero-header {
             text-align: center;
-            padding-top: 120px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.6); /* 背景を少し暗くするオーバーレイ */
         }
 
-        header .overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
+        .hero-header h1 {
+            font-size: 2.5em;
             margin-bottom: 10px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+        .hero-header p {
+            font-size: 1.2em;
         }
 
-        header .cta-button {
-            background-color: #FFD700; /* ゴールド */
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
             padding: 10px 20px;
-            color: #1E2A47;
+            background: #ff6b6b;
+            color: #fff;
             text-decoration: none;
-            border-radius: 5px;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
 
-        header .cta-button:hover {
-            background-color: #ffcc00; /* 明るいゴールド */
+        .cta-button:hover {
+            background: #ff3b3b;
         }
 
         /* ナビゲーション */
-        nav.navbar {
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
             display: flex;
             justify-content: center;
-            background-color: #112B6A;
-            padding: 15px 0;
+            margin: 0;
+            padding: 0;
         }
 
-        nav a {
-            color: white;
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
             text-decoration: none;
-            font-size: 1.2rem;
-            margin: 0 20px;
-            transition: color 0.3s ease;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #FFD700; /* 金色 */
+        .nav-links a:hover {
+            color: #ff6b6b;
         }
 
-        /* メインコンテンツ */
+        /* メインセクション */
         main {
-            padding: 50px;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.7); /* 背景オーバーレイ */
         }
 
-        /* サイトについて */
-        section#about {
+        section {
             margin-bottom: 40px;
         }
 
-        section#about h2 {
-            font-size: 2.5rem;
+        section h2 {
+            text-align: center;
+            font-size: 2em;
             margin-bottom: 20px;
+            color: #ff6b6b;
         }
 
-        section#about p {
-            font-size: 1.2rem;
+        section p {
+            text-align: center;
+            font-size: 1.1em;
             line-height: 1.8;
         }
 
-        /* 最新の試合まとめ */
-        section#latest h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
+        /* カードレイアウト */
         .card-container {
             display: flex;
+            justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
 
         .card {
-            background-color: #263B76;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
             border-radius: 10px;
-            overflow: hidden;
-            width: 48%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
+            width: 300px;
+            text-align: center;
         }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 15px;
-        }
-
-        .card-content h3 {
-            font-size: 1.8rem;
+        .card h3 {
+            font-size: 1.5em;
             margin-bottom: 10px;
-        }
-
-        .card-content p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
+            color: #ff6b6b;
         }
 
         .read-more {
-            color: #FFD700;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #ff6b6b;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
 
-        /* お問い合わせ */
-        section#contact {
-            margin-top: 40px;
-        }
-
-        section#contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        section#contact p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        section#contact a {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: bold;
+        .read-more:hover {
+            background: #ff3b3b;
         }
 
         /* フッター */
         footer {
-            background-color: #112B6A;
             text-align: center;
             padding: 20px;
-            color: white;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 0.9em;
         }
-
-        /* フェードインアニメーション */
-        .fade-in {
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
     </style>
 </head>
 <body>
     <!-- ヘッダーセクション -->
     <header class="hero-header">
-        <div class="overlay">
-            <h1>ハッスン＠バスケIQの森</h1>
-            <p>Bリーグの試合を深く分析し、選手のパフォーマンスや戦術を解説！</p>
-            <a href="#latest" class="cta-button">最新の試合を見る</a>
-        </div>
-    </header>
-
-    <!-- ナビゲーション -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#about">サイトについて</a></li>
-            <li><a href="#latest">試合まとめ</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
-        </ul>
-    </nav>
-
-    <!-- メインコンテンツ -->
-    <main>
-        <!-- サイトについて -->
-        <section id="about" class="fade-in">
-            <h2>サイトについて</h2>
-            <p>このサイトは、Bリーグの試合分析を中心に展開しています。戦術解説や選手のハイライトを通じて、バスケの魅力をお届けします！</p>
-        </section>
-
-        <!-- 最新の試合まとめ -->
-        <section id="latest" class="fade-in">
-            <h2>最新の試合まとめ</h2>
-            <div class="card-container">
-                <article class="card">
-                    <img src="images/game1.jpg" alt="試合1の画像">
-                    <div class="card-content">
-                        <h3>第17節 Game1: 広島 vs 長崎</h3>
-                        <p>スリーポイント成功率が勝敗を分けた注目の試合。</p>
-                        <a href="https://twitter.com/your-account" target="_blank" class="read-more">Xで詳細を見る</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="images/game2.jpg" alt="試合2の画像">
-                    <div class="card-content">
-                        <h3>第17節 Game2: 横浜 vs 琉球</h3>
-                        <p>琉球のタイムシェアが光った試合。</p>
-                        <a href="https://twitter.com/your-account" target="_blank" class="read-more">Xで詳細を見る</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- お問い合わせ -->
-        <section id="contact" class="fade-in">
-            <h2>お問い合わせ</h2>
-            <p>分析や投稿内容についてのご意見は、<a href="https://twitter.com/your-account" target="_blank">X</a>までお気軽にどうぞ！</p>
-        </section>
-    </main>
-
-    <!-- フッター -->
-    <footer>
-        <p>&copy; 2025 ハッスン＠バスケIQの森. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+        <h1>ハッスン＠バスケIQの森</h
