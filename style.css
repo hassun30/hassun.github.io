@@ -20,7 +20,29 @@ a {
 a:hover {
     color: #ffc107; /* ホバー時にやや明るい黄色 */
 }
+/* アイコンを丸くする */
+.site-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px auto;
+}
 
+/* 最新ツイートのデザイン */
+#tweets-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+}
+
+#tweets-container p {
+    text-align: center;
+    font-style: italic;
+}
 /* ヘッダー */
 .hero-header {
     position: relative;
