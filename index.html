@@ -1,13 +1,16 @@
-<!DOCTYPE html>
+å<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ハッスン＠バスケIQの森 | Bリーグ試合まとめと分析">
     <title>ハッスン＠バスケIQの森</title>
+    <meta name="description" content="Bリーグの試合結果と戦術分析を紹介するハッスン＠バスケIQの森。">
+    <meta name="keywords" content="Bリーグ, バスケットボール, 試合結果, 戦術解説">
+    <meta name="author" content="ハッスン">
+    <link rel="canonical" href="https://example.com/">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="google-site-verification" content="ZknenWhy0TbBdrdhJTkHkPXFsed4s9J2O46b2qwiekM" />
+    <script src="script.js" defer></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
     <!-- ヘッダーセクション -->
@@ -15,34 +18,27 @@
         <div class="overlay">
             <h1>ハッスン＠バスケIQの森</h1>
             <p>Bリーグの試合を深く分析し、選手のパフォーマンスや戦術を解説！</p>
-            <a href="#latest" class="cta-button">最新の試合を見る</a>
         </div>
     </header>
 
-    <!-- ナビゲーション -->
+    <!-- ナビゲーションバー -->
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#about">サイトについて</a></li>
-            <li><a href="#latest">試合まとめ</a></li>
+        <ul>
+            <li><a href="#latest">最新の試合</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
         </ul>
     </nav>
 
-    <!-- メインコンテンツ -->
+    <!-- 最新の試合まとめセクション -->
     <main>
-        <section id="about">
-            <h2>サイトについて</h2>
-            <p>このサイトは、Bリーグの試合分析を中心に展開しています。戦術解説や選手のハイライトを通じて、バスケの魅力をお届けします！</p>
-        </section>
-
-        <section id="latest">
+        <section id="latest" class="fade-in">
             <h2>最新の試合まとめ</h2>
-            <p>Bリーグの試合結果や分析を、選手の視点で深掘りします！</p>
-        </section>
-
-        <section id="contact">
-            <h2>お問い合わせ</h2>
-            <p>ご意見やご質問は、<a href="https://twitter.com/your-account" target="_blank">X（旧Twitter）</a>までお気軽にどうぞ！</p>
+            <div id="tweet-container">
+                <!-- Twitterウィジェット -->
+                <blockquote class="twitter-timeline">
+                    <a href="https://twitter.com/your-account?ref_src=twsrc%5Etfw">Tweets by ハッスン</a>
+                </blockquote>
+            </div>
         </section>
     </main>
 
@@ -52,3 +48,88 @@
     </footer>
 </body>
 </html>
+
+<style>
+/* 全体スタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f4f4f9;
+    color: #333;
+}
+
+/* ヘッダー */
+.hero-header {
+    background: url('header-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 300px;
+    position: relative;
+}
+.hero-header .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* ナビゲーションバー */
+.navbar {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* セクションスタイル */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* アニメーション */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
