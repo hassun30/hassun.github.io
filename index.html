@@ -1,44 +1,70 @@
-å<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ハッスン＠バスケIQの森</title>
-    <meta name="description" content="Bリーグの試合結果と戦術分析を紹介するハッスン＠バスケIQの森。">
-    <meta name="keywords" content="Bリーグ, バスケットボール, 試合結果, 戦術解説">
+    <meta name="description" content="ハッスン＠バスケIQの森 | Bリーグ試合まとめと分析">
+    <meta name="keywords" content="Bリーグ, バスケットボール, 試合分析, 試合結果, ハッスン">
     <meta name="author" content="ハッスン">
-    <link rel="canonical" href="https://example.com/">
+    <title>ハッスン＠バスケIQの森</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- ヘッダーセクション -->
     <header class="hero-header">
+        <img src="images/icon.png" alt="サイトアイコン" class="site-icon">
         <div class="overlay">
             <h1>ハッスン＠バスケIQの森</h1>
             <p>Bリーグの試合を深く分析し、選手のパフォーマンスや戦術を解説！</p>
+            <a href="#latest" class="cta-button">最新の試合を見る</a>
         </div>
     </header>
 
-    <!-- ナビゲーションバー -->
+    <!-- ナビゲーション -->
     <nav class="navbar">
-        <ul>
-            <li><a href="#latest">最新の試合</a></li>
+        <ul class="nav-links">
+            <li><a href="#about">サイトについて</a></li>
+            <li><a href="#latest">試合まとめ</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
         </ul>
     </nav>
 
-    <!-- 最新の試合まとめセクション -->
+    <!-- メインコンテンツ -->
     <main>
+        <!-- サイトについて -->
+        <section id="about" class="fade-in">
+            <h2>サイトについて</h2>
+            <p>このサイトは、Bリーグの試合分析を中心に展開しています。戦術解説や選手のハイライトを通じて、バスケの魅力をお届けします！</p>
+        </section>
+
+        <!-- 最新の試合まとめ -->
         <section id="latest" class="fade-in">
             <h2>最新の試合まとめ</h2>
-            <div id="tweet-container">
-                <!-- Twitterウィジェット -->
-                <blockquote class="twitter-timeline">
-                    <a href="https://twitter.com/your-account?ref_src=twsrc%5Etfw">Tweets by ハッスン</a>
-                </blockquote>
+            <div class="card-container">
+                <article class="card">
+                    <img src="images/game1.jpg" alt="試合1の画像">
+                    <div class="card-content">
+                        <h3>第17節 Game1: 広島 vs 長崎</h3>
+                        <p>スリーポイント成功率が勝敗を分けた注目の試合。</p>
+                        <a href="https://twitter.com/your-account" target="_blank" class="read-more">Xで詳細を見る</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/game2.jpg" alt="試合2の画像">
+                    <div class="card-content">
+                        <h3>第17節 Game2: 横浜 vs 琉球</h3>
+                        <p>琉球のタイムシェアが光った試合。</p>
+                        <a href="https://twitter.com/your-account" target="_blank" class="read-more">Xで詳細を見る</a>
+                    </div>
+                </article>
             </div>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="contact" class="fade-in">
+            <h2>お問い合わせ</h2>
+            <p>分析や投稿内容についてのご意見は、<a href="https://twitter.com/your-account" target="_blank">X</a>までお気軽にどうぞ！</p>
         </section>
     </main>
 
@@ -48,88 +74,3 @@
     </footer>
 </body>
 </html>
-
-<style>
-/* 全体スタイル */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: #f4f4f9;
-    color: #333;
-}
-
-/* ヘッダー */
-.hero-header {
-    background: url('header-image.jpg') no-repeat center center/cover;
-    color: #fff;
-    height: 300px;
-    position: relative;
-}
-.hero-header .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-}
-
-/* ナビゲーションバー */
-.navbar {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
-.navbar ul {
-    list-style: none;
-    padding: 0;
-}
-.navbar ul li {
-    display: inline;
-    margin: 0 15px;
-}
-.navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-.navbar ul li a:hover {
-    text-decoration: underline;
-}
-
-/* セクションスタイル */
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* フッター */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-    margin-top: 20px;
-}
-
-/* アニメーション */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
-}
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-</style>
