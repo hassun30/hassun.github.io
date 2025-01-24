@@ -13,7 +13,7 @@
 <body>
     <!-- ヘッダーセクション -->
     <header class="hero-header">
-        <img src=":images:/icon.png" alt="サイトアイコン" class="site-icon">
+        <img src="images/icon.png" alt="サイトアイコン" class="site-icon">
         <div class="overlay">
             <h1>ハッスン＠バスケIQの森</h1>
             <p>Bリーグの試合を深く分析し、選手のパフォーマンスや戦術を解説！</p>
@@ -41,23 +41,9 @@
         <!-- 最新の試合まとめ -->
         <section id="latest" class="fade-in">
             <h2>最新の試合まとめ</h2>
-            <div class="card-container">
-                <article class="card">
-                    <img src="images/game1.jpg" alt="試合1の画像">
-                    <div class="card-content">
-                        <h3>第17節 Game1: 広島 vs 長崎</h3>
-                        <p>スリーポイント成功率が勝敗を分けた注目の試合。</p>
-                        <a href="https://twitter.com/your-account" target="_blank" class="read-more">Xで詳細を見る</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="images/game2.jpg" alt="試合2の画像">
-                    <div class="card-content">
-                        <h3>第17節 Game2: 横浜 vs 琉球</h3>
-                        <p>琉球のタイムシェアが光った試合。</p>
-                        <a href="https://twitter.com/your-account" target="_blank" class="read-more">Xで詳細を見る</a>
-                    </div>
-                </article>
+            <div id="tweets-container">
+                <!-- 動的にツイートを反映 -->
+                <p>最新の投稿を読み込んでいます...</p>
             </div>
         </section>
 
@@ -72,5 +58,6 @@
     <footer>
         <p>&copy; 2025 ハッスン＠バスケIQの森. All Rights Reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
