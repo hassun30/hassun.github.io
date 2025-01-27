@@ -1,145 +1,53 @@
-/* 全体の基本スタイル */
+/* style.css */
+
 body {
-    margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: #121212; /* 背景全体のダークグレー */
-    color: #e0e0e0; /* 文字色を明るいグレーに設定 */
-    line-height: 1.6;
-}
-
-h1, h2, h3 {
     margin: 0;
-    color: #ffffff; /* 見出しを明るい白色に */
-}
-
-a {
-    color: #ffd700; /* リンク用の淡い黄色 */
-    text-decoration: none;
-}
-
-a:hover {
-    color: #ffc107; /* ホバー時にやや明るい黄色 */
-}
-/* ヘッダー */
-.hero-header {
-    position: relative;
-    text-align: center;
-    padding: 100px 20px;
-    background: url(':images:/background.jpg') no-repeat center center/cover; /* 背景画像 */
-    color: #ffffff;
-}
-
-.hero-header .overlay {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero-header p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* オーバーレイ効果 */
-    z-index: 1;
-}
-/* アイコンを丸くする */
-.site-icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 10px auto;
-}
-
-/* 最新ツイートのデザイン */
-#tweets-container {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
+    padding: 0;
+    background-color: #f9f9f9;
     color: #333;
 }
 
-#tweets-container p {
+.hero-header {
     text-align: center;
-    font-style: italic;
-}
-/* ボタン */
-.cta-button {
-    display: inline-block;
-    background-color: #ffd700; /* 鮮やかな淡い黄色 */
-    color: #121212;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    background-color: #0044cc;
+    color: white;
+    padding: 20px;
 }
 
-.cta-button:hover {
-    background-color: #ffc107; /* ホバー時にやや明るく */
+.hero-header .site-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
-/* ナビゲーション */
-.navbar {
-    background: #1a1a1a;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.nav-links {
-    list-style: none;
+.navbar ul {
     display: flex;
     justify-content: center;
-    margin: 0;
+    list-style: none;
     padding: 0;
+    background-color: #002266;
 }
 
-.nav-links li {
+.navbar ul li {
     margin: 0 15px;
 }
 
-.nav-links a {
-    color: #e0e0e0; /* ナビゲーションリンクをライトグレーに */
-    font-weight: bold;
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
 }
 
-/* メインコンテンツ */
-main {
-    padding: 40px 20px;
-}
-
-section {
-    margin-bottom: 40px;
+#latest-tweets {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.05); /* セクション背景に透明感 */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ffd700; /* 見出しに淡い黄色のライン */
-    padding-bottom: 5px;
-}
-
-/* フッター */
-footer {
-    background: #1a1a1a;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 20px 0;
+#tweets-container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
