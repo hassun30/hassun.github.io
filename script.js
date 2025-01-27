@@ -1,7 +1,7 @@
 // script.js
 
 // Bearer Tokenを環境変数に保存して読み込む
-const BEARER_TOKEN = "あなたのBearer Token"; // 実際にはセキュリティ上、安全に保存する方法を使用する
+const BEARER_TOKEN = ".env"; // 実際にはセキュリティ上、安全に保存する方法を使用する
 
 // 最新ツイートを取得する関数
 async function fetchLatestTweets(username) {
@@ -46,6 +46,6 @@ function displayTweets(tweets) {
 
 // ページ読み込み時にツイートを取得
 document.addEventListener("DOMContentLoaded", () => {
-    const username = "your-account"; // ツイートを取得したいXアカウント名
+    const username = "@baskeyoungster"; // ツイートを取得したいXアカウント名
     fetchLatestTweets(username);
 });
