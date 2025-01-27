@@ -3,54 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ハッスン＠バスケIQの森 | Bリーグ試合まとめと分析">
+    <meta name="description" content="ハッスン＠バスケIQの森 | 最新のBリーグ試合情報をリアルタイムで更新！">
     <meta name="keywords" content="Bリーグ, バスケットボール, 試合分析, 試合結果, ハッスン">
-    <meta name="author" content="ハッスン">
     <title>ハッスン＠バスケIQの森</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- ヘッダーセクション -->
+    <!-- ヘッダー -->
     <header class="hero-header">
-        <img src=":images:/icon.png" alt="サイトアイコン" class="site-icon">
-        <div class="overlay">
-            <h1>ハッスン＠バスケIQの森</h1>
-            <p>Bリーグの試合を深く分析し、選手のパフォーマンスや戦術を解説！</p>
-            <a href="#latest" class="cta-button">最新の試合を見る</a>
-        </div>
+        <img src="images/icon.png" alt="サイトアイコン" class="site-icon">
+        <h1>ハッスン＠バスケIQの森</h1>
+        <p>Bリーグの試合を深く分析し、選手のパフォーマンスや戦術を解説！</p>
     </header>
 
     <!-- ナビゲーション -->
     <nav class="navbar">
-        <ul class="nav-links">
+        <ul>
             <li><a href="#about">サイトについて</a></li>
-            <li><a href="#latest">試合まとめ</a></li>
+            <li><a href="#latest-tweets">最新の試合情報</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
         </ul>
     </nav>
 
     <!-- メインコンテンツ -->
     <main>
-        <!-- サイトについて -->
-        <section id="about" class="fade-in">
-            <h2>サイトについて</h2>
-            <p>このサイトは、Bリーグの試合分析を中心に展開しています。戦術解説や選手のハイライトを通じて、バスケの魅力をお届けします！</p>
-        </section>
-
-        <!-- 最新の試合まとめ -->
-        <section id="latest" class="fade-in">
-            <h2>最新の試合まとめ</h2>
+        <!-- 最新ツイート表示セクション -->
+        <section id="latest-tweets">
+            <h2>最新の試合情報</h2>
             <div id="tweets-container">
-                <!-- 動的にツイートを反映 -->
-                <p>最新の投稿を読み込んでいます...</p>
+                <p>ツイートを読み込んでいます...</p>
             </div>
         </section>
 
         <!-- お問い合わせ -->
-        <section id="contact" class="fade-in">
+        <section id="contact">
             <h2>お問い合わせ</h2>
-            <p>分析や投稿内容についてのご意見は、<a href="https://twitter.com/your-account" target="_blank">X</a>までお気軽にどうぞ！</p>
+            <p>ご意見は <a href="https://twitter.com/your-account" target="_blank">@your-account</a> までお気軽に！</p>
         </section>
     </main>
 
@@ -58,6 +46,8 @@
     <footer>
         <p>&copy; 2025 ハッスン＠バスケIQの森. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
