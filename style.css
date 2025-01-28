@@ -8,13 +8,71 @@ body {
     color: #333;
     background-color: #f9f9f9;
 }
-
 /* ヘッダー */
-header {
-    background: #007bff;
-    color: #fff;
-    padding: 20px 10px;
+.hero-header {
+    position: relative;
     text-align: center;
+    color: white;
+    background: url('images/header-bg.jpg') no-repeat center center / cover;
+    height: 60vh;
+}
+.hero-header .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+}
+.hero-header h1 {
+    font-size: 3rem;
+}
+.cta-button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+/* ナビゲーション */
+.navbar {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* カード */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 15px;
 }
 /* サイトアイコンを丸くする */
 .site-icon {
