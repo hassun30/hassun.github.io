@@ -77,13 +77,20 @@ body {
 /* ギャラリー */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 写真の最小幅を150pxに設定 */
     gap: 10px;
     padding: 20px;
 }
 .gallery-container img {
     width: 100%;
+    height: auto; /* 高さを自動調整 */
+    max-height: 150px; /* 高さの上限を設定 */
+    object-fit: cover; /* 写真が枠に収まるようにトリミング */
     border-radius: 8px;
+    transition: transform 0.3s ease; /* ホバー効果を追加 */
+}
+.gallery-container img:hover {
+    transform: scale(1.05); /* マウスオーバーで少し拡大 */
 }
 
 /* フッター */
