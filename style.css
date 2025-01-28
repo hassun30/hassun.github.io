@@ -34,7 +34,13 @@ body {
     text-decoration: none;
     margin-top: 15px;
 }
-
+/* サイトアイコンを丸くする */
+.site-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 /* ナビゲーション */
 .navbar {
     background: #333;
