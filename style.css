@@ -3,8 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #fff; /* 背景を白に変更 */
-    color: #333; /* 文字色を黒に変更 */
+    background: #fff;
+    color: #333;
 }
 
 /* ヘッダー */
@@ -20,20 +20,24 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* オーバーレイの色を少し透明に */
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .site-logo {
-    width: 80px;
+    width: 120px; /* アイコンの大きさを大きく変更 */
     animation: fadeInDown 1s;
+}
+.header-overlay h1 {
+    color: #fff; /* ヘッダーの文字色を白に変更 */
+    font-size: 36px;
 }
 
 /* ナビゲーション */
 .navbar {
-    background: #ff4500;
+    background: #0061f2; /* ビーコルのテーマ色：青に変更 */
     padding: 10px 0;
     text-align: center;
     position: sticky;
@@ -71,37 +75,66 @@ body {
     padding: 20px;
 }
 .match-summary article {
-    background: #f9f9f9; /* 明るい背景に変更 */
-    padding: 15px;
+    background: #f9f9f9;
+    padding: 20px;
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 97, 242, 0.5); /* 青色の影に変更 */
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.5);
 }
 .match-summary article:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(255, 69, 0, 0.7);
+    box-shadow: 0 8px 20px rgba(0, 97, 242, 0.7);
 }
 
-/* フォトギャラリー */
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    justify-content: center;
+/* 試合タイトル */
+.match-summary h2 {
+    font-size: 22px;
+    color: #0061f2; /* ビーコルのテーマ色を使用 */
+    font-weight: bold;
+    margin-bottom: 15px;
 }
-.gallery-container img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
+
+/* ピリオドごとの投稿 */
+.period-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.period-post {
+    background: #f1f1f1;
+    padding: 10px;
     border-radius: 8px;
+    border: 1px solid #ddd;
     transition: 0.3s;
 }
-.gallery-container img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+.period-post:hover {
+    background: #0061f2;
+    color: #fff;
+}
+
+/* MVP & MIP */
+.mvp-mip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.mvp-mip div {
+    display: flex;
+    align-items: center;
+}
+.mvp-mip img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.mvp-mip span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
 
 /* モーダルウィンドウ */
@@ -125,8 +158,8 @@ body {
 }
 .close {
     position: absolute;
-    top: 20px;  /* 上部を調整して、斜め上に表示されないように */
-    right: 20px;  /* 右端に調整 */
+    top: 20px;
+    right: 20px;
     color: #fff;
     font-size: 35px;
     cursor: pointer;
