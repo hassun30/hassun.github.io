@@ -3,102 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ハッスン＠バスケIQの森 | Bリーグ試合まとめと分析">
-    <title>ハッスン＠バスケIQの森</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href=":images:/icon.png" type="image/png">
+    <title>試合結果 - バスケIQの森</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- ヘッダー -->
-    <header class="hero-header">
-        <div class="header-overlay">
-            <h1>ハッスン＠バスケIQの森</h1>
-            <p>Bリーグ試合の詳細分析 & 選手パフォーマンス評価</p>
+<header>
+    <h1>バスケIQの森 - 直近5試合</h1>
+</header>
+
+<main>
+    <section class="matches">
+        <!-- 5試合分のデータ -->
+        <div class="match" id="match1">
+            <h2>〇月〇日 vs ●●</h2>
+            <div class="posts">
+                <div class="post"><h3>試合前予想</h3><p>（ここにX投稿）</p></div>
+                <div class="post"><h3>1Q</h3><p>（ここにX投稿）</p></div>
+                <div class="post"><h3>2Q</h3><p>（ここにX投稿）</p></div>
+                <div class="post"><h3>3Q</h3><p>（ここにX投稿）</p></div>
+                <div class="post"><h3>試合総括</h3><p>（ここにX投稿）</p></div>
+            </div>
+            <div class="mvp-mip">
+                <div class="player">
+                    <h3>MVP</h3>
+                    <img src="mvp-icon.png" alt="MVP選手" class="player-icon">
+                    <p>〇〇選手</p>
+                </div>
+                <div class="player">
+                    <h3>MIP</h3>
+                    <img src="mip-icon.png" alt="MIP選手" class="player-icon">
+                    <p>△△選手</p>
+                </div>
+            </div>
         </div>
-    </header>
 
-    <!-- ナビゲーション -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">サイトについて</a></li>
-            <li><a href="#latest">試合まとめ</a></li>
-            <li><a href="#gallery">フォトギャラリー</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
-        </ul>
-    </nav>
-
-    <!-- メインコンテンツ -->
-    <main>
-
-        <!-- サイトについて -->
-        <section id="about">
-            <h2>サイトについて</h2>
-            <p>
-                当サイトは、Bリーグを中心としたバスケットボールファンのための情報発信サイトです。横浜ビー・コルセアーズを応援するだけでなく、試合の最新情報や注目ポイントを深掘りし、より多くの方々にバスケットボールの魅力をお届けします。
-            </p>
-            <p>
-                試合結果の要約から、選手の個別パフォーマンス分析、さらには見逃せないシーンのハイライトまで幅広く取り扱っています。高校・大学バスケについても時折フォーカスし、未来のスター選手たちに注目します。バスケットボールファンにとって有益な情報が満載のこのサイトを通じて、皆様と一緒に日本バスケットボール界を盛り上げていきたいと考えています。
-            </p>
-        </section>
-
-        <!-- 最新の試合まとめ -->
-        <section id="latest">
-            <h2>最新の試合まとめ</h2>
-            <div class="match-summary">
-                <article>
-                    <h3>第19節横浜ビー・コルセアーズ vs 川崎ブレイブサンダースgame2</h3>
-                    <p>苦しみながら我慢した横浜が勝利！</p>
-                    <a href="https://x.com/baskeyoungster/status/1884575699706519696" target="_blank">詳細を見る</a>
-                </article>                
-                <article>
-                    <h3>第18節横浜ビー・コルセアーズ  vs 群馬クレインサンダースgame2</h3>
-                    <p>チームの軸が機能した群馬の勝利</p>
-                    <a href="https://x.com/baskeyoungster/status/1883428539724390795" target="_blank">詳細を見る</a>
-                </article>                
-               <article>
-                    <h3>第17節横浜ビー・コルセアーズ  vs 琉球ゴールデンキングスgame2</h3>
-                    <p>タイムシェアでダブルオーバータイムを制した琉球の勝利</p>
-                    <a href="https://x.com/baskeyoungster/status/1878350067977134258" target="_blank">詳細を見る</a>
-                </article>
-            </div>
-        </section>
-
-        <!-- フォトギャラリー -->
-        <section id="gallery">
-            <h2>フォトギャラリー</h2>
-            <div class="gallery-container">
-                <img src=":images:/buntai.jpg" alt="ギャラリー1" class="gallery-img">
-                <img src=":images:/buntai2.jpg" alt="ギャラリー2" class="gallery-img">
-                <img src=":images:/buntai3.jpg" alt="ギャラリー3" class="gallery-img">
-                <img src=":images:/buntai4.jpg" alt="ギャラリー4" class="gallery-img">
-            </div>
-        </section>
-
-        <!-- お問い合わせ -->
-        <section id="contact">
-            <h2>お問い合わせ</h2>
-            <p>ご意見・お問い合わせは <a href="https://x.com/baskeyoungster">X(Twitter)</a> まで。</p>
-        </section>
-
-    </main>
-
-    <!-- フッター -->
-    <footer>
-        <p>&copy; 2025 ハッスン＠バスケIQの森. All Rights Reserved.</p>
-    </footer>
+        <!-- ここに直近5試合分を繰り返す -->
+    </section>
+</main>
 
 </body>
 </html>
-/* フォトギャラリーの画像サイズ調整 */
-.gallery-container img {
-    width: 400px;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.gallery-container img:hover {
-    transform: scale(1.2);
-}
-
