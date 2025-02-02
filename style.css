@@ -27,12 +27,12 @@ body {
     align-items: center;
 }
 .site-logo {
-    width: 120px; /* アイコンの大きさを大きく変更 */
+    width: 140px; /* アイコンのサイズを大きく変更 */
     animation: fadeInDown 1s;
 }
 .header-overlay h1 {
     color: #fff; /* ヘッダーの文字色を白に変更 */
-    font-size: 36px;
+    font-size: 48px; /* フォントサイズも大きく */
 }
 
 /* ナビゲーション */
@@ -126,8 +126,8 @@ body {
     align-items: center;
 }
 .mvp-mip img {
-    width: 40px;
-    height: 40px;
+    width: 50px; /* アイコンのサイズ変更 */
+    height: 50px; /* アイコンのサイズ変更 */
     border-radius: 50%;
     margin-right: 10px;
 }
