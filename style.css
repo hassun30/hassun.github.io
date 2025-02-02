@@ -3,8 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #0a0a0a;
-    color: #fff;
+    background: #fff; /* 背景を白に変更 */
+    color: #333; /* 文字色を黒に変更 */
 }
 
 /* ヘッダー */
@@ -20,7 +20,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4); /* オーバーレイの色を少し透明に */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,7 +71,7 @@ body {
     padding: 20px;
 }
 .match-summary article {
-    background: #222;
+    background: #f9f9f9; /* 明るい背景に変更 */
     padding: 15px;
     border-radius: 10px;
     width: 300px;
@@ -125,8 +125,8 @@ body {
 }
 .close {
     position: absolute;
-    top: 15px;
-    right: 25px;
+    top: 20px;  /* 上部を調整して、斜め上に表示されないように */
+    right: 20px;  /* 右端に調整 */
     color: #fff;
     font-size: 35px;
     cursor: pointer;
