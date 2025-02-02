@@ -1,67 +1,153 @@
+/* 全体のスタイル */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #222;
+    background: #0a0a0a;
     color: #fff;
+}
+
+/* ヘッダー */
+.hero-header {
+    position: relative;
     text-align: center;
-    padding: 20px;
+    background: url(':images:/background.jpg') no-repeat center/cover;
+    height: 300px;
 }
-
-.matches {
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-}
-
-.match {
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-.posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.post {
-    background: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.mvp-mip {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-
-.player {
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-
-.player-icon {
+.site-logo {
     width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 10px 0;
-    background: #ddd;
+    animation: fadeInDown 1s;
+}
+
+/* ナビゲーション */
+.navbar {
+    background: #ff4500;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.navbar li {
+    display: inline;
+    margin: 0 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    color: #000;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* 試合まとめ */
+.match-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.match-summary article {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.5);
+}
+.match-summary article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 69, 0, 0.7);
+}
+
+/* フォトギャラリー */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+}
+
+/* モーダルウィンドウ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+.modal-content {
+    margin-top: 50px;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.9);
+    animation: fadeIn 0.5s;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+.close:hover {
+    color: #ff4500;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
