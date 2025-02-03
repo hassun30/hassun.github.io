@@ -96,47 +96,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* ピリオドごとの投稿 */
-.period-posts {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.period-post {
-    background: #f1f1f1;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    transition: 0.3s;
-}
-.period-post:hover {
-    background: #0061f2;
-    color: #fff;
-}
-
-/* MVP & MIP */
-.mvp-mip {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-.mvp-mip div {
-    display: flex;
-    align-items: center;
-}
-.mvp-mip img {
-    width: 50px; /* アイコンのサイズ変更 */
-    height: 50px; /* アイコンのサイズ変更 */
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.mvp-mip span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
 /* モーダルウィンドウ */
 .modal {
     display: none;
