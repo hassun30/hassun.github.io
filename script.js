@@ -72,3 +72,42 @@ window.onscroll = function () {
 
 // 初期表示のページ設定
 showPage(currentPage);
+.game-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.game-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.game-card h3 {
+    margin-top: 0;
+    color: #0073e6;
+}
+
+.game-card ul {
+    padding-left: 20px;
+}
+
+.game-card a {
+    color: #e60000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.game-card a:hover {
+    text-decoration: underline;
+}
+.gallery-container img {
+    width: auto;
+    height: 24px;
+    object-fit: cover;
+}
