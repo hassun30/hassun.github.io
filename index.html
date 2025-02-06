@@ -15,7 +15,7 @@
     <!-- ヘッダー -->
     <header class="hero-header">
         <div class="header-overlay">
-            <img src=":images:/icon.png" alt="サイトロゴ" class="site-logo">
+            <img src="images/logo.png" alt="サイトロゴ" class="site-logo">
             <h1>ハッスン＠バスケIQの森</h1>
             <p>Bリーグ試合の詳細分析 & 選手パフォーマンス評価</p>
         </div>
@@ -31,88 +31,58 @@
         </ul>
     </nav>
 
-    <!-- メインコンテンツ -->
-    <main>
+    <!-- サイト紹介 -->
+    <section id="about" class="fade-in">
+        <h2>サイトについて</h2>
+        <p>当サイトは、Bリーグを中心としたバスケットボールファンのための情報発信サイトです。</p>
+        <p>横浜ビー・コルセアーズを応援するだけでなく、試合の最新情報や注目ポイントを深掘りし、バスケットボールの魅力をお届けします。</p>
+    </section>
 
-        <!-- サイトについて -->
-        <section id="about">
-            <h2>サイトについて</h2>
-            <p>
-                当サイトは、Bリーグを中心としたバスケットボールファンのための情報発信サイトです。横浜ビー・コルセアーズを応援するだけでなく、試合の最新情報や注目ポイントを深掘りし、より多くの方々にバスケットボールの魅力をお届けします。
-            </p>
-            <p>
-                試合結果の要約から、選手の個別パフォーマンス分析、さらには見逃せないシーンのハイライトまで幅広く取り扱っています。高校・大学バスケについても時折フォーカスし、未来のスター選手たちに注目します。バスケットボールファンにとって有益な情報が満載のこのサイトを通じて、皆様と一緒に日本バスケットボール界を盛り上げていきたいと考えています。
-            </p>
-        </section>
-<!-- 最新の試合まとめ -->
-<section id="latest">
-    <h2>最新の試合まとめ</h2>
-    
-    <div class="game-summary">
-        <div class="game-card">
-            <h3>第20節 横浜ビー・コルセアーズ vs 千葉ジェッツ（Game2）</h3>
-            <ul>
-                <li>５人が二桁得点とバランス良く得点を重ねた千葉の勝利</li>
-                <li>横浜：森井選手、須藤選手、外国籍３人のプレイ強度はお見事。ラベナ＋ウイング陣のスコアリングが今後の課題</li>
-                <li>千葉：富樫選手にボールが入らない時のクリエイトが課題。ただ、最後のスイッチを目的とした渡邊選手の森井選手のマークは痺れた</li>
-                <li><a href="https://x.com/baskeyoungster/status/1885953101255016506" target="_blank">詳細を見る</a></li>
-            </ul>
-        </div>
-
-        <div class="game-card">
-            <h3>第20節 横浜ビー・コルセアーズ vs 千葉ジェッツ（Game1）</h3>
-            <ul>
-                <li>ディフェンス強度が終始落ちなかった横浜の勝利</li>
-                <li>横浜：森井選手がゲームコントロール、冨樫選手を完封とMVP級の貢献</li>
-                <li>千葉：富樫選手以外でクリエイトし喰らいつくも、セットプレイでクリエイトできずに苦戦</li>
-                <li><a href="https://x.com/baskeyoungster/status/1885589701027078642" target="_blank">詳細を見る</a></li>
-            </ul>
-        </div>
-
-        <div class="game-card">
-            <h3>第19節 横浜ビー・コルセアーズ vs 川崎ブレイブサンダース（Game2）</h3>
-            <ul>
-                <li>苦しみながらも我慢の展開を制し、横浜が勝利</li>
-                <li>横浜：4ピリでディフェンスの強度、オフェンスの遂行力が上がり、逆転に成功。次戦では入りからエナジー全開でいきたい</li>
-                <li>川崎：3ピリで10点差をつけてから守りに入ってしまった。縦にアタックするプレイを継続したかった</li>
-                <li><a href="https://x.com/baskeyoungster/status/1884575699706519696" target="_blank">詳細を見る</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-        <!-- フォトギャラリー -->
-        <section id="gallery">
-            <h2>フォトギャラリー</h2>
-            <div class="gallery-container">
-                <img src=":images:/buntai.jpg" alt="ギャラリー1" onclick="openModal(this)">
-                <img src=":images:/buntai2.jpg" alt="ギャラリー2" onclick="openModal(this)">
-                <img src=":images:/buntai3.jpg" alt="ギャラリー3" onclick="openModal(this)">
-                <img src=":images:/buntai4.jpg" alt="ギャラリー4" onclick="openModal(this)">
+    <!-- 最新の試合まとめ -->
+    <section id="latest" class="fade-in">
+        <h2>最新の試合まとめ</h2>
+        <div class="game-summary">
+            <div class="game-card">
+                <h3>第20節 横浜 vs 千葉（Game2）</h3>
+                <ul>
+                    <li>５人が二桁得点とバランス良く得点を重ねた千葉の勝利</li>
+                    <li>横浜：森井選手、須藤選手のプレイ強度はお見事</li>
+                    <li><a href="#">詳細を見る</a></li>
+                </ul>
             </div>
-        </section>
 
-        <!-- モーダルウィンドウ -->
-        <div id="modal" class="modal" onclick="closeModal()">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modalImg">
+            <div class="game-card">
+                <h3>第19節 横浜 vs 川崎（Game2）</h3>
+                <ul>
+                    <li>苦しみながらも我慢の展開を制し、横浜が勝利</li>
+                    <li>川崎：守りに入ってしまい失速</li>
+                    <li><a href="#">詳細を見る</a></li>
+                </ul>
+            </div>
         </div>
-<!-- スクロールトップボタン -->
-<button class="scroll-to-top" onclick="scrollToTop()">▲</button>
+    </section>
 
-    <h2>ページネーション</h2>
-    <div class="pagination-controls">
-        <button class="prev" onclick="prevPage()">◁ 前へ</button>
-        <button class="next" onclick="nextPage()">次へ ▷</button>
+    <!-- フォトギャラリー -->
+    <section id="gallery" class="fade-in">
+        <h2>フォトギャラリー</h2>
+        <div class="gallery-container">
+            <img src="images/buntai.jpg" alt="試合写真1" onclick="openModal(this)">
+            <img src="images/buntai2.jpg" alt="試合写真2" onclick="openModal(this)">
+            <img src="images/buntai3.jpg" alt="試合写真3" onclick="openModal(this)">
+        </div>
+    </section>
+
+    <!-- モーダルウィンドウ -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
     </div>
-</section>
-        <!-- お問い合わせ -->
-        <section id="contact">
-            <h2>お問い合わせ</h2>
-            <p>ご意見・お問い合わせは <a href="https://x.com/baskeyoungster">X(Twitter)</a> まで。</p>
-        </section>
 
-    </main>
+    <!-- お問い合わせ -->
+    <section id="contact" class="fade-in">
+        <h2>お問い合わせ</h2>
+        <p>ご意見・お問い合わせは <a href="#">X(Twitter)</a> まで。</p>
+    </section>
 
     <!-- フッター -->
     <footer>
