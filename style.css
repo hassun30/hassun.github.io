@@ -16,8 +16,8 @@ body {
 }
 
 .header-overlay .site-logo {
-    width: 100px;
-    height: 100px;
+    width: ２００px;
+    height: ２００px;
     border-radius: 50%; /* アイコンを丸くする */
 }
 
