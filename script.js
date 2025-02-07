@@ -1,30 +1,13 @@
+### **script.js**
+```js
 document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".gallery-container img");
-    const modal = document.createElement("div");
-    modal.classList.add("modal");
-    modal.innerHTML = `
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-    `;
-    document.body.appendChild(modal);
-    
-    const modalImg = document.getElementById("modal-img");
+    // モーダル要素の取得
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
     const closeBtn = document.querySelector(".close");
-    
-    images.forEach(img => {
+
+    // ギャラリーの画像をクリックしたらモーダルを表示
+    const galleryImages = document.querySelectorAll(".gallery-container img");
+    galleryImages.forEach(img => {
         img.addEventListener("click", function () {
-            modal.style.display = "flex";
-            modalImg.src = this.src;
-        });
-    });
-    
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-    
-    modal.addEventListener("click", function (e) {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-});
+            modal.style.display = "flex";  // flexを指定して中央に配置される\n            modalImg.src = this.src;\n        });\n    });\n\n    // バツボタンをクリックしたらモーダルを閉じる\n    closeBtn.addEventListener("click", function () {\n        modal.style.display = \"none\";\n    });\n\n    // モーダルの背景をクリックしても閉じる\n    modal.addEventListener("click", function (event) {\n        if (event.target === modal) {\n            modal.style.display = \"none\";\n        }\n    });\n});
