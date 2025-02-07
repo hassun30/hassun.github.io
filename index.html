@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ハッスン＠バスケIQの森 | Bリーグ試合まとめと分析">
     <meta name="keywords" content="Bリーグ, バスケットボール, 横浜ビー・コルセアーズ, 試合分析, フォトギャラリー">
@@ -10,15 +10,9 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-87CT2P13JT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body>
 
-  gtag('config', 'G-87CT2P13JT');
-</script><body>
+    <!-- ヘッダー -->
     <header class="hero-header">
         <div class="header-overlay">
             <img src=":images:/icon.png" alt="サイトロゴ" class="site-logo">
@@ -26,7 +20,8 @@
             <p>Bリーグ試合の詳細分析 & 選手パフォーマンス評価</p>
         </div>
     </header>
-    
+
+    <!-- ナビゲーション -->
     <nav class="navbar">
         <ul>
             <li><a href="#about">サイトについて</a></li>
@@ -36,68 +31,41 @@
         </ul>
     </nav>
 
-    <section id="about" class="fade-in">
+    <!-- サイト紹介 -->
+    <section id="about" class="content-section fade-in">
         <h2>サイトについて</h2>
         <p>当サイトは、Bリーグを中心としたバスケットボールファンのための情報発信サイトです。</p>
         <p>横浜ビー・コルセアーズを応援するだけでなく、試合の最新情報や注目ポイントを深掘りし、バスケットボールの魅力をお届けします。</p>
         <p>試合結果の要約から、選手の個別パフォーマンス分析、さらには見逃せないシーンのハイライトまで幅広く取り扱っています。高校・大学バスケについても時折フォーカスし、未来のスター選手たちに注目します。</p>
     </section>
 
-    <section id="latest" class="fade-in">
+    <!-- 最新の試合まとめ -->
+    <section id="latest" class="content-section fade-in">
         <h2>最新の試合まとめ</h2>
         <div class="game-summary">
-        <div class="game-card">
-            <h3>第20節 横浜ビー・コルセアーズ vs 千葉ジェッツ（Game2）</h3>
-            <ul>
-                <li>５人が二桁得点とバランス良く得点を重ねた千葉の勝利</li>
-                <li>横浜：森井選手、須藤選手、外国籍３人のプレイ強度はお見事。ラベナ＋ウイング陣のスコアリングが今後の課題</li>
-                <li>千葉：富樫選手にボールが入らない時のクリエイトが課題。ただ、最後のスイッチを目的とした渡邊選手の森井選手のマークは痺れた</li>
-                <li><a href="https://x.com/baskeyoungster/status/1885953101255016506" target="_blank">詳細を見る</a></li>
-            </ul>
-        </div>
-
-        <div class="game-card">
-            <h3>第20節 横浜ビー・コルセアーズ vs 千葉ジェッツ（Game1）</h3>
-            <ul>
-                <li>ディフェンス強度が終始落ちなかった横浜の勝利</li>
-                <li>横浜：森井選手がゲームコントロール、冨樫選手を完封とMVP級の貢献</li>
-                <li>千葉：富樫選手以外でクリエイトし喰らいつくも、セットプレイでクリエイトできずに苦戦</li>
-                <li><a href="https://x.com/baskeyoungster/status/1885589701027078642" target="_blank">詳細を見る</a></li>
-            </ul>
-        </div>
-
-        <div class="game-card">
-            <h3>第19節 横浜ビー・コルセアーズ vs 川崎ブレイブサンダース（Game2）</h3>
-            <ul>
-                <li>苦しみながらも我慢の展開を制し、横浜が勝利</li>
-                <li>横浜：4ピリでディフェンスの強度、オフェンスの遂行力が上がり、逆転に成功。次戦では入りからエナジー全開でいきたい</li>
-                <li>川崎：3ピリで10点差をつけてから守りに入ってしまった。縦にアタックするプレイを継続したかった</li>
-                <li><a href="https://x.com/baskeyoungster/status/1884575699706519696" target="_blank">詳細を見る</a></li>
-            </ul>
-        </div>
-</section>
-    <section id="gallery" class="fade-in">
-        <h2>フォトギャラリー</h2>
-        <div class="gallery-container">
-            <img src=":images:/buntai.jpg" alt="試合写真1" onclick="openModal(this)">
-            <img src=":images:/buntai2.jpg" alt="試合写真2" onclick="openModal(this)">
-            <img src=":images:/buntai3.jpg" alt="試合写真3" onclick="openModal(this)">
-            <img src=":images:/buntai4.jpg" alt="試合写真4" onclick="openModal(this)">
-        </div>
-    </section>
-    
-    <div id="modal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
-    
-    <section id="contact" class="fade-in">
-        <h2>お問い合わせ</h2>
-        <p>ご意見・お問い合わせは <a href="https://x.com/baskeyoungster">X(Twitter)</a> まで。</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 ハッスン＠バスケIQの森. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+            <div class="game-card">
+                <h3>第20節 横浜 vs 千葉（Game2）</h3>
+                <ul>
+                    <li>５人が二桁得点とバランス良く得点を重ねた千葉の勝利</li>
+                    <li>横浜：森井選手、須藤選手のプレイ強度はお見事</li>
+                    <li><a href="https://x.com/baskeyoungster/status/1885953101255016506" target="_blank">詳細を見る</a></li>
+                </ul>
+            </div>
+            <div class="game-card">
+                <h3>第20節 横浜 vs 千葉（Game1）</h3>
+                <ul>
+                    <li>ディフェンス強度が終始落ちなかった横浜の勝利</li>
+                    <li>横浜：森井選手がゲームコントロール、冨樫選手を完封とMVP級の貢献</li>
+                    <li>千葉：富樫選手以外でクリエイトし喰らいつくも、セットプレイで苦戦</li>                    
+                    <li><a href="https://x.com/baskeyoungster/status/1885589701027078642" target="_blank">詳細を見る</a></li>
+                </ul>
+            </div>
+            <div class="game-card">
+                <h3>第19節 横浜 vs 川崎</h3>
+                <ul>
+                    <li>苦しみながらも我慢の展開を制し、横浜が勝利</li>
+                    <li>横浜：4ピリでディフェンスの強度とオフェンスの遂行力が上がり、逆転に成功</li>
+                    <li>川崎：3ピリで10点差をつけた後、守備に回る</li>
+                    <li><a href="https://x.com/baskeyoungster/status/1884575699706519696" target="_blank">詳細を見る</a></li>
+                </ul>
+            </div>\n            \n            <!-- 他の試合カードを追加して、直近5試合分にする -->\n        </div>\n    </section>\n\n    <!-- フォトギャラリー -->\n    <section id=\"gallery\" class=\"content-section fade-in\">\n        <h2>フォトギャラリー</h2>\n        <div class=\"gallery-container\">\n            <img src=\":images:/buntai.jpg\" alt=\"試合写真1\" onclick=\"openModal(this)\">\n            <img src=\":images:/buntai2.jpg\" alt=\"試合写真2\" onclick=\"openModal(this)\">\n            <img src=\":images:/buntai3.jpg\" alt=\"試合写真3\" onclick=\"openModal(this)\">\n            <img src=\":images:/buntai4.jpg\" alt=\"試合写真4\" onclick=\"openModal(this)\">\n        </div>\n    </section>\n\n    <!-- モーダルウィンドウ -->\n    <div id=\"modal\" class=\"modal\" onclick=\"closeModal()\">\n        <span class=\"close\">&times;</span>\n        <img class=\"modal-content\" id=\"modalImg\">\n    </div>\n\n    <!-- お問い合わせ -->\n    <section id=\"contact\" class=\"content-section fade-in\">\n        <h2>お問い合わせ</h2>\n        <p>ご意見・お問い合わせは <a href=\"#\">X(Twitter)</a> まで。</p>\n    </section>\n\n    <!-- フッター -->\n    <footer>\n        <p>&copy; 2025 ハッスン＠バスケIQの森. All Rights Reserved.</p>\n    </footer>\n\n</body>\n</html>\n"}
