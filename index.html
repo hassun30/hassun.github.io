@@ -9,7 +9,15 @@
   <title>ハッスン＠バスケIQの森</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
-</head>
+<!-- JSON-LD 構造化データ（任意） -->  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "ハッスン＠バスケIQの森",
+    "description": "Bリーグ試合まとめと分析サイト",
+    "author": { "@type": "Person", "name": "ハッスン" }
+  }</head>
 <body>
 
   <!-- ヘッダー -->
@@ -20,7 +28,8 @@
       <p>Bリーグ試合の詳細分析 &amp; 選手パフォーマンス評価</p>
     </div>
   </header>
-
+ <!-- ハンバーガーメニュー（モバイル用） -->
+  <button class="menu-toggle" aria-label="メニューを開く">&#9776;</button>
   <!-- ナビゲーション -->
   <nav class="navbar">
     <ul>
@@ -106,8 +115,10 @@
   </section>
 
   <!-- モーダルウィンドウ -->  
-  <div id="modal" class="modal" onclick="closeModal()">\n    <span class="close">&times;</span>\n    <img class="modal-content" id="modalImg">\n  </div>
-
+  <div id="modal" class="modal" aria-hidden="true" onclick="closeModal()">
+    <span class="close" aria-label="閉じる">&times;</span>
+    <img class="modal-content" id="modalImg" alt="拡大画像">
+  </div>
   <!-- お問い合わせ -->
   <section id="contact" class="content-section fade-in">
     <h2>お問い合わせ</h2>
