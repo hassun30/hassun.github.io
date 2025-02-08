@@ -66,25 +66,28 @@ body {
   padding: 20px;
 }
 
-/* 試合まとめ - カード形式 */
-/* 試合まとめ */
+/* 試合まとめセクション */
 #latest {
-  margin: 20px auto;
-  max-width: 1000px;
+    margin: 20px auto;
+    max-width: 1000px;
 }
+
 .game-summary {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 300px)); /* 各カードの幅を300pxに固定 */
-  gap: 20px;
-  justify-content: center; /* カードを中央に配置 */
+    display: grid;
+    /* カードの幅を300pxに固定 */
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 20px;  /* 各カードの間に20pxの余白を確保 */
+    justify-content: center; /* カードを中央に配置 */
 }
+
 .game-card {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  text-align: left;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    text-align: left;
 }
+
 
 /* フォトギャラリー */
 #gallery {
