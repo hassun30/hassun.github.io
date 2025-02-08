@@ -21,7 +21,7 @@ body {
   display: inline-block;
 }
 .site-logo {
-  width: 100x;  /* アイコンのサイズは150px */
+  width: 70x;  /* アイコンのサイズは150px */
   height: auto;
   border-radius: 40%; /* 丸く表示 */
   margin-bottom: 10px;
