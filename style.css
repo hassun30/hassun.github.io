@@ -26,8 +26,30 @@ body {
   border-radius: 50%;
   margin-bottom: 10px;
 }
+.mascot-panel {
+  display: flex;              /* 横並びに配置 */
+  align-items: center;        /* 垂直方向に中央揃え */
+  gap: 20px;                  /* キャラクター画像とセリフの間に余白を確保 */
+  margin: 20px 0;
+}
 
-/* ナビゲーション */
+.mascot-image {
+  width: 150px;               /* 適度なサイズに調整（必要に応じて変更可能） */
+  height: 150px;              /* 画像の高さも同じにして正方形に（丸く切り抜くため） */
+  border-radius: 50%;         /* 丸く表示 */
+  flex-shrink: 0;             /* 横幅が縮まらないように固定 */
+}
+
+.mascot-dialogue {
+  flex: 1;                    /* 残りの横幅を占有 */
+  font-size: 16px;
+  color: #0044cc;
+  background: #e0eaff;        /* 薄い青色の背景で目立たせる */
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}/* ナビゲーション */
 .navbar {
   background: #0044cc; /* 青色 */
   padding: 10px 0;
