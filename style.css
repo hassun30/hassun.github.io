@@ -89,9 +89,38 @@ body {
   font-family: 'Georgia', serif; /* フォント変更 */\n  padding: 20px;
 }
 
-/* 試合まとめ - カード形式 */
+/* 試合まとめ - キャラクターパネルとカード形式 */
 #latest {
   margin: 20px auto;
+}
+.latest-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.mascot-panel {
+  flex: 0 0 300px; /* 横幅300pxに固定 */
+  background: #e0eaff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.mascot-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+.mascot-dialogue {
+  font-size: 16px;
+  color: #0044cc;
+  background: #e0eaff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  text-align: left;
 }
 .game-summary {
   display: grid;
