@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // バツボタンをクリックしてモーダルを閉じる
+  // バツボタンでモーダルを閉じる
   closeBtn.addEventListener("click", function () {
     modal.style.display = "none";
   });
