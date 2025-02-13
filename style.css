@@ -22,8 +22,8 @@ body {
   display: inline-block;
 }
 .site-logo {
-  width: 40px;  /* アイコンのサイズは40px */
-  height: 40px; /* 幅と高さを同じにして円形に */
+  width: 100px;  /* アイコンのサイズは100px */
+  height:　100px; /* 幅と高さを同じにして円形に */
   border-radius: 50%;
   margin-bottom: 10px;
 }
