@@ -22,8 +22,8 @@ body {
   display: inline-block;
 }
 .site-logo {
-  width: 40px;  /* アイコンのサイズは40px */
-  height: 40px; /* 幅と高さを同じにして完全な円形に */
+  width: 100px;  /* アイコンのサイズは100px */
+  height: 100px; /* 幅と高さを同じにして完全な円形に */
   border-radius: 50%;
   margin-bottom: 10px;
 }
@@ -68,7 +68,7 @@ body {
   padding: 20px;
 }
 
-/* 最新の試合まとめ - キャラクターとカードを横並びに */
+/* 最新の試合まとめセクション内、キャラクターパネルとカード群を横並びに配置 */
 .latest-combined {
   display: flex;
   flex-wrap: wrap;
@@ -79,16 +79,22 @@ body {
   margin: 20px auto;
 }
 
-/* マスコットパネル */
+/* キャラクターパネルのスタイル */
 .mascot-panel {
   flex: 0 0 300px; /* 固定横幅 */
-  background: #e0eaff;
+  background: #ffffff;  /* 背景は白 */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
+.mascot-heading {
+  font-size: 18px;
+  color: #0044cc;
+  text-align: center;
+  margin-bottom: 10px;
+}
 .mascot-image {
-  width: 100px;  /* キャラクター画像のサイズ調整 */
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   display: block;
@@ -97,12 +103,34 @@ body {
 .mascot-dialogue {
   font-size: 16px;
   color: #0044cc;
-  background: #e0eaff;
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  background: transparent; /* 背景は透明にし、テキストのみ青く表示 */
+  padding: 10px;
+  border-left: 3px solid #0044cc;
+  border-radius: 5px;
   text-align: left;
 }
+
+/* キャラクターアイコン（カード内、吹き出し風） */
+.card-icon-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e0eaff;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  /* 余白を追加してカードから少し離す */
+  transform: translate(10px, -10px);
+}
+.card-icon-container::after {
+  content: \"\";\n  position: absolute;\n  top: 50%;\n  right: -10px;\n  transform: translateY(-50%);\n  border-width: 5px;\n  border-style: solid;\n  border-color: transparent transparent transparent #e0eaff;\n}
+.card-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+}
+
 
 /* ゲームカード群 */
 .game-summary {
@@ -128,26 +156,6 @@ body {
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
-
-/* キャラクターアイコン（カード内、吹き出し風） */
-.card-icon-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #e0eaff;
-  padding: 5px;
-  border-radius: 50%;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-}
-.card-icon-container::after {
-  content: \"\";\n  position: absolute;\n  top: 50%;\n  right: -10px;\n  transform: translateY(-50%);\n  border-width: 5px;\n  border-style: solid;\n  border-color: transparent transparent transparent #e0eaff;\n}
-.card-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: block;
-}
-
 /* セグメント部分 */
 .match-segments {
   display: flex;
