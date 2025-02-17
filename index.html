@@ -59,18 +59,18 @@
       </div>
     </div>
   </section> 
-  <!-- 最新の試合まとめ (カード形式) -->
-  <section id="latest" class="content-section fade-in">
-    <h2>最新の試合まとめ</h2>
-    <div class="latest-conbined">
+  <!-- 最新の試合まとめ（キャラクターとカードの合体） -->
+<section id="latest" class="content-section fade-in">
+  <h2>最新の試合まとめ</h2>
+  <div class="latest-combined">
     <!-- キャラクターパネル -->
     <div class="mascot-panel">
-      <img src=":images:/icon.png" alt="マスコットキャラクター" class="mascot-image">
+      <h3 class="mascot-heading">ハッスンのキャラクター紹介</h3>
+      <img src="images/mascot.png" alt="マスコットキャラクター" class="mascot-image">
       <div class="mascot-dialogue">
-        <p>こんにちは！ 僕はバスケくん。今日の試合は熱い戦いが待っています！ 各ピリのハイライトは、下のアイコンをクリックしてチェックしてね！
-        </p>
+        <p>こんにちは！ 僕はバスケくんです。今日の試合は熱い戦いが待っています！ 各ピリのハイライトは、下のアイコンをクリックしてチェックしてね！</p>
       </div>
-    </div>   
+    </div>
        <!-- 試合まとめカード群 -->
       <div class="game-summary">
         <!-- 試合カード 1 -->
@@ -89,7 +89,12 @@
           <li><a href="https://x.com/baskeyoungster/status/1888143114185183664" target="_blank">試合総評</a></li>
         </ul>
       </div>   
-        <div class="game-summary">      
+           <button class="details-btn" onclick="location.href='match-detail.html?match=20game2'">詳細を見る</button>
+        <!-- キャラクターアイコンをカード内に小さく表示（吹き出し風） --> 
+        <div class="card-icon-container">
+          <img src=":images:/icon.png" alt="キャラクター" class="card-icon">
+        </div>
+      </div>        <div class="game-summary">      
           <h3>第20節 横浜 vs 千葉（Game2）</h3>
         <div class="match-segments">
             <div class="segment">        
