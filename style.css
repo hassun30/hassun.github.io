@@ -109,42 +109,42 @@ body {
   text-align: left;
 }
 
-/* ゲームカード群（キャラクターとカード部分の横並び） */
+/* 最新の試合まとめを縦に表示（ゲームカード群） */
 .game-summary {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: block;  /* グリッドレイアウトではなく縦に積む */
 }
 
-/* 各ゲームカード */
+/* 各試合カード：カード内で左側にアイコン、右側に内容を配置 */
 .game-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background: #f9f9f9;
   padding: 20px;
-  width: 400px; /* 固定横幅 */
+  margin-bottom: 20px;  /* カード間の余白 */
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   text-align: left;
-  position: relative;
 }
 
-/* カード内のアイコン（吹き出し風） */
+/* カード内のアイコン用領域 */
 .card-icon-wrapper {
-  flex: 0 0 40px; /* アイコン用の領域 */
+  flex: 0 0 40px;  /* アイコン用の固定横幅 */
   margin-right: 15px;
 }
+
+/* アイコン画像のサイズ調整 */
 .card-icon-wrapper img {
   width: 40px;
-  height: 40px;
+  height: 40px;  /* 正方形にして完全な円形に */
   border-radius: 50%;
   display: block;
 }
+
+/* カード内の内容部分 */
 .card-content {
   flex: 1;
 }
+
 
 /* ゲームカードのタイトル */
 .game-card h3 {
