@@ -1,3 +1,72 @@
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* 背景は白 */
+  color: #333;
+}
+
+/* ヘッダー */
+.hero-header {
+  background: url(':images:/background.jpg') center/cover no-repeat; /* ヘッダー背景に写真を使用 */
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+  position: relative;
+}
+.header-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.site-logo {
+  width: 100px;  /* アイコンのサイズは40px */
+  height: 100px; /* 幅と高さを同じにして円形に */
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ナビゲーション */
+.navbar {
+  background: #0044cc; /* 青色 */
+  padding: 10px 0;
+  text-align: center;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* コンテンツセクション */
+.content-section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+/* サイト紹介 (About) */
+#about {
+  border: 2px solid #0044cc; /* 青色の枠線 */
+  font-family: 'Georgia', serif; /* フォント変更 */
+  padding: 20px;
+}
 /* 最新の試合まとめ - キャラクターとカードを横並びに配置 */
 .latest-combined {
   display: flex;
@@ -116,7 +185,10 @@
   background: #003399;
 }
 
-/* フォトギャラリー（既存のまま） */
+/* フォトギャラリー */
+#gallery {
+  margin: 20px auto;
+}
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,7 +235,35 @@
   cursor: pointer;
 }
 
-/* お問い合わせ、フッターは既存のまま */
+* お問い合わせ */
+#contact {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #0044cc;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
 
 @media (max-width: 600px) {
   .latest-combined, .game-summary, .mascot-panel, .game-card {
