@@ -68,19 +68,59 @@ body {
   padding: 20px;
 }
 
-/* 最新の試合まとめ - キャラクターとカードを縦に表示（ブロックレイアウト） */
+/* 最新の試合まとめセクション全体 */
+.latest-combined {
+  display: block;      /* 縦に積む */
+  max-width: 1000px;
+  margin: 20px auto;
+  /* キャラクターとカード群の間に余白を確保 */
+  padding-bottom: 20px;
+}
+
+/* キャラクターパネル */
+.mascot-panel {
+  background: #ffffff;  /* 背景は白 */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;  /* カード群との間隔 */
+}
+.mascot-heading {
+  font-size: 18px;
+  color: #0044cc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.mascot-image {
+  width: 100px;    /* キャラクター画像サイズ */
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+.mascot-dialogue {
+  font-size: 16px;
+  color: #0044cc;              /* 文章部分は青 */
+  background: transparent;      /* 背景は透明 */
+  padding: 10px;
+  border-left: 3px solid #0044cc;  /* 左側に青いボーダー */
+  border-radius: 5px;
+  text-align: left;
+}
+
+/* ゲームカード群（縦に積む） */
 .game-summary {
-  display: block; /* 縦に積む */
+  display: block;
   margin: 0 auto;
 }
 
-/* 各ゲームカード：左側にアイコン、右側に内容を配置 */
+/* 各ゲームカード：縦方向に並ぶ */
 .game-card {
   display: flex;
   align-items: flex-start;
   background: #f9f9f9;
   padding: 20px;
-  margin-bottom: 20px; /* カード間の余白 */
+  margin-bottom: 20px;  /* カード間の余白 */
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   text-align: left;
@@ -91,14 +131,14 @@ body {
   margin-right: auto;
 }
 
-/* アイコン部分（カード内） */
+/* カード内のアイコン部分（左側） */
 .card-icon-wrapper {
-  flex: 0 0 40px;  /* アイコン用の固定領域 */
+  flex: 0 0 40px;  /* 固定領域 */
   margin-right: 15px;
 }
 .card-icon-wrapper img {
   width: 40px;
-  height: 40px;  /* 正方形にして完全な円形に */
+  height: 40px;  /* 正方形で円形に */
   border-radius: 50%;
   display: block;
 }
@@ -116,7 +156,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* セグメント部分 */
+/* セグメント部分（試合前、1ピリ、2ピリ、3ピリのリンクのみ） */
 .match-segments {
   display: flex;
   flex-direction: column;
@@ -166,6 +206,7 @@ body {
     margin-bottom: 10px;
   }
 }
+
 
 /* フォトギャラリー（既存のまま） */
 .gallery-container {
