@@ -68,76 +68,42 @@ body {
   padding: 20px;
 }
 
-/* 最新の試合まとめ - キャラクターとカードを横並びに配置 */
-.latest-combined {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: 20px auto;
-}
-
-/* キャラクターパネル */
-.mascot-panel {
-  flex: 0 0 300px; /* 固定横幅 */
-  background: #ffffff; /* 背景を白に */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-}
-.mascot-heading {
-  font-size: 18px;
-  color: #0044cc;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.mascot-image {
-  width: 100px;  /* キャラクター画像サイズ調整 */
-  height: 100px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 10px auto;
-}
-.mascot-dialogue {
-  font-size: 16px;
-  color: #0044cc;
-  background: transparent; /* セリフ部分のみ青いテキスト */
-  padding: 10px;
-  border-left: 3px solid #0044cc;
-  border-radius: 5px;
-  text-align: left;
-}
-
-/* ゲームカード群 - 2列表示 */
+/* 最新の試合まとめ - キャラクターとカードを縦に表示（ブロックレイアウト） */
 .game-summary {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* 2列に配置 */
-  gap: 20px;
-  justify-content: center;
+  display: block; /* 縦に積む */
+  margin: 0 auto;
 }
 
-/* ゲームカード */
+/* 各ゲームカード：左側にアイコン、右側に内容を配置 */
 .game-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background: #f9f9f9;
   padding: 20px;
+  margin-bottom: 20px; /* カード間の余白 */
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   text-align: left;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* アイコン部分（カード内） */
 .card-icon-wrapper {
-  flex: 0 0 40px; /* アイコン用の領域（幅40px） */
+  flex: 0 0 40px;  /* アイコン用の固定領域 */
   margin-right: 15px;
 }
 .card-icon-wrapper img {
   width: 40px;
-  height: 40px;
+  height: 40px;  /* 正方形にして完全な円形に */
   border-radius: 50%;
   display: block;
 }
+
+/* カードの内容部分 */
 .card-content {
   flex: 1;
 }
@@ -149,6 +115,8 @@ body {
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
+
+/* セグメント部分 */
 .match-segments {
   display: flex;
   flex-direction: column;
@@ -172,6 +140,8 @@ body {
 .segment a:hover {
   text-decoration: underline;
 }
+
+/* 詳細ボタン */
 .details-btn {
   background: #0044cc;
   border: none;
@@ -184,6 +154,17 @@ body {
 }
 .details-btn:hover {
   background: #003399;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .game-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-icon-wrapper {
+    margin-bottom: 10px;
+  }
 }
 
 /* フォトギャラリー（既存のまま） */
