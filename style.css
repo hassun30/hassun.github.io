@@ -20,9 +20,9 @@ body {
   padding: 20px;
   border-radius: 10px;
   display: inline-block;
-
+}
 .site-logo {
-  width: 70px;  /* アイコンのサイズは40px */
+  width: 70px;  /* サイトロゴのサイズ調整 */
   height: 70px; /* 幅と高さを同じにして円形に */
   border-radius: 50%;
   margin-bottom: 10px;
@@ -64,26 +64,25 @@ body {
 /* サイト紹介 (About) */
 #about {
   border: 2px solid #0044cc; /* 青色の枠線 */
-  font-family: 'Georgia', serif; /* フォント変更 */
+  font-family: 'Georgia', serif;
   padding: 20px;
 }
 
-/* 最新の試合まとめセクション全体 */
+/* 最新の試合まとめ - キャラクターとカードの縦表示 */
 .latest-combined {
-  display: block;      /* 縦に積む */
+  display: block;  /* 縦に積む */
   max-width: 1000px;
   margin: 20px auto;
-  /* キャラクターとカード群の間に余白を確保 */
   padding-bottom: 20px;
 }
 
 /* キャラクターパネル */
 .mascot-panel {
-  background: #ffffff;  /* 背景は白 */
+  background: #ffffff; /* 背景は白 */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;  /* カード群との間隔 */
+  margin-bottom: 20px;
 }
 .mascot-heading {
   font-size: 18px;
@@ -92,7 +91,7 @@ body {
   margin-bottom: 10px;
 }
 .mascot-image {
-  width: 100px;    /* キャラクター画像サイズ */
+  width: 100px;  /* キャラクター画像サイズ */
   height: 100px;
   border-radius: 50%;
   display: block;
@@ -100,27 +99,27 @@ body {
 }
 .mascot-dialogue {
   font-size: 16px;
-  color: #0044cc;              /* 文章部分は青 */
-  background: transparent;      /* 背景は透明 */
+  color: #0044cc; /* 文字色は青 */
+  background: transparent; /* 背景は透明 */
   padding: 10px;
-  border-left: 3px solid #0044cc;  /* 左側に青いボーダー */
+  border-left: 3px solid #0044cc;
   border-radius: 5px;
   text-align: left;
 }
 
-/* ゲームカード群（縦に積む） */
+/* ゲームカード群（縦表示） */
 .game-summary {
-  display: block;
+  display: block;  /* 縦に積む */
   margin: 0 auto;
 }
 
-/* 各ゲームカード：縦方向に並ぶ */
+/* 各ゲームカード：左側にアイコン、右側に内容を配置 */
 .game-card {
   display: flex;
   align-items: flex-start;
   background: #f9f9f9;
   padding: 20px;
-  margin-bottom: 20px;  /* カード間の余白 */
+  margin-bottom: 20px; /* カード間の余白 */
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   text-align: left;
@@ -131,14 +130,14 @@ body {
   margin-right: auto;
 }
 
-/* カード内のアイコン部分（左側） */
+/* アイコン部分（カード内） */
 .card-icon-wrapper {
   flex: 0 0 40px;  /* 固定領域 */
   margin-right: 15px;
 }
 .card-icon-wrapper img {
   width: 40px;
-  height: 40px;  /* 正方形で円形に */
+  height: 40px;
   border-radius: 50%;
   display: block;
 }
@@ -156,7 +155,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* セグメント部分（試合前、1ピリ、2ピリ、3ピリのリンクのみ） */
+/* セグメント部分 */
 .match-segments {
   display: flex;
   flex-direction: column;
@@ -207,7 +206,6 @@ body {
   }
 }
 
-
 /* フォトギャラリー（既存のまま） */
 .gallery-container {
   display: grid;
@@ -255,56 +253,6 @@ body {
   cursor: pointer;
 }
 
-/* フォトギャラリー */
-#gallery {
-  margin: 20px auto;
-}
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 各画像は300px幅 */
-  gap: 15px;
-  justify-content: center;
-}
-.gallery-container img {
-  width: 300px;
-  height: auto;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.gallery-container img:hover {
-  transform: scale(1.05);
-}
-
-/* モーダルウィンドウ */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;  /* Flexboxで中央寄せ */
-  align-items: center;
-}
-.modal-content {
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-  display: block;
-  margin: auto;
-}
-.close {
-  position: absolute;
-  top: 15px;
-  right: 30px;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
 /* お問い合わせ */
 #contact {
   background: #ffffff;
@@ -333,15 +281,4 @@ footer {
 }
 @keyframes fadeIn {
   to { opacity: 1; transform: translateY(0); }
-}
-
-/* レスポンシブ対応（スマートフォン向け） */
-@media (max-width: 600px) {
-  .latest-combined, .game-summary, .mascot-panel, .game-card {
-    max-width: 100%;
-    width: 100%;
-  }
-  .gallery-container img {
-    width: 100%;
-  }
 }
