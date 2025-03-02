@@ -218,16 +218,49 @@ body {
 .details-btn:hover {
   background: #003399;
 }
-/* レスポンシブ対応 */
 @media (max-width: 600px) {
+  /* 全体の余白とフォントサイズの調整 */
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* ナビゲーション：縦並びに変更、各リンクを大きめに表示 */
+  .navbar ul {
+    display: block;
+    text-align: center;
+  }
+  .navbar li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* コンテンツセクション：幅を100%にし、パディングを調整 */
+  .content-section {
+    margin: 10px auto;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  /* ゲームカード：縦方向に再配置 */
   .game-card {
     flex-direction: column;
     align-items: center;
+    padding: 15px;
   }
   .card-icon-wrapper {
     margin-bottom: 10px;
   }
+
+  /* フォトギャラリー：グリッドを1列表示 */
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+  .gallery-container img {
+    width: 100%;
+  }
 }
+
 
 /* フォトギャラリーのサイズ調整 */
 .gallery-container {
