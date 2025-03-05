@@ -145,17 +145,7 @@ body {
 
 }
 
-/* アイコン部分（左側） */
-.card-icon-wrapper {
-  flex: 0 0 30px;
-  margin-right: 10px;
-}
-.card-icon-wrapper img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: block;
-}
+
 
 /* カード内容 */
 .card-content {
