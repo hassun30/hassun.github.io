@@ -135,11 +135,11 @@ body {
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 950px;
-　gap: 15px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  gap: 15px;
 }
 
 /* アイコン部分（左側） */
@@ -194,7 +194,7 @@ body {
 
 /* 詳細ボタン */
 .details-btn {
-  background: #0044cc;
+  background: #003399;
   border: none;
   color: white;
   padding: 10px 15px;
@@ -248,7 +248,7 @@ body {
   align-items: center;
 }
 .modal-content {
-  max-width: 90px;
+  max-width: 90vw;
   max-height: 90vh;
   border-radius: 10px;
   display: block;
