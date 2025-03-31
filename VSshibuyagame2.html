@@ -26,9 +26,123 @@
     "author": { "@type": "Person", "name": "ハッスン" }
   }
   </script>
-</head>
-<body>
+  <style>
+    /* ヘッダーのデザイン */
+    .hero-header {
+      background-color: #006F99; /* 横浜のチームカラー */
+      color: #fff;
+      text-align: center;
+      padding: 40px 0;
+      font-family: 'Arial', sans-serif;
+    }
 
+    .hero-header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .hero-header p {
+      font-size: 1.2em;
+    }
+
+    /* ナビゲーションバー */
+    .navbar {
+      background-color: #333;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .navbar a:hover {
+      color: #FFD700; /* ホバー時のカラー変更 */
+    }
+
+    /* メインコンテンツ */
+    main {
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+    }
+
+    .content-section h2 {
+      font-size: 2.2em;
+      color: #006F99;
+    }
+
+    .match-info p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .back-btn {
+      background-color: #006F99;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .back-btn:hover {
+      background-color: #004466;
+    }
+
+    /* フッター */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+      .hero-header h1 {
+        font-size: 2em;
+      }
+
+      .navbar a {
+        font-size: 1em;
+      }
+
+      .content-section h2 {
+        font-size: 1.8em;
+      }
+
+      .match-info p {
+        font-size: 1em;
+      }
+
+      .back-btn {
+        font-size: 1em;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
   <!-- ヘッダー -->
   <header class="hero-header">
     <div class="header-overlay">
@@ -47,7 +161,6 @@
       <li><a href="index.html#contact">お問い合わせ</a></li>
     </ul>
   </nav>
-
   <!-- メインコンテンツ -->
   <main>
     <section class="content-section match-detail fade-in">
